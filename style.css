@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --FS: 34px;
+  --BG: rgba(0, 225, 255, 0.434);
+  --COLOR: black;
+  --COLOR1: white;
+}
+body {
+  background-color: var(--BG);
+  background-image: linear-gradient(
+    to bottom,
+    var(--BG),
+    rgba(255, 255, 255, 0.847)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+main {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+h2 {
+  font-size: var(--FS);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-image: url(./image/canyon-8124036_1280.jpg);
+  background-size: cover;
+  background-position: center 150%;
+  background-clip: text;
+  color: hsla(0, 15%, 86%, 0.158);
+  text-shadow: 5px 2px;
+}
+.tray {
+  position: absolute;
+  top: 40px;
+  width: 100px;
+  height: 100px;
+  border: 18px solid red;
+  background-color: rgba(128, 128, 128, 0.126);
+  border-radius: 50%;
+  transform: rotateX(180deg);
+  transform: skewX(30deg);
+  z-index: 1;
+  box-shadow: 5px 2px;
+}
+h1 {
+  font-size: 20px;
+  top: 10px;
+  text-align: center;
+}
+.steel {
+  width: 10px;
+  height: 50px;
+  position: relative;
+  top: -10px;
+  left: 60px;
+  background-color: red;
+  border: 1px solid rgb(78, 77, 77);
+  box-shadow: 2px 2px;
+  z-index: -1;
+}
+
+.box1 {
+  font-size: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(202, 6, 169);
+  transform: skewy(-10deg);
+  animation: slide 5s infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+@keyframes slide {
+  0% {
+    background-color: pink;
+    transform: translatey(0);
+    z-index: 0;
+  }
+  30% {
+    scale: 2;
+    transform: translatey(200px) rotate(180deg);
+    background-color: blue;
+    z-index: 1;
+  }
+  60% {
+    transform: translatey(-10px) rotate(180deg);
+    background-color: yellow;
+    z-index: 1;
+  }
+  90% {
+    transform: translatey(800px) rotate3d(90deg);
+    background-color: rgb(18, 219, 78);
+  }
+}
+.wave {
+  margin: 0;
+  width: 100%;
+  height: 200px;
+  border: 2px solid rgba(181, 193, 250, 0.381);
+  position: fixed;
+  bottom: 0px;
+  background-color: rgb(159, 217, 240);
+}
+.wavey {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(9, 112, 197);
+  position: fixed;
+  bottom: 0px;
+  margin: 0;
+  box-shadow: 1px 2px;
+  border-radius: 3px 0px;
+  animation: animate 4s ease-in-out infinite;
+  z-index: 10;
+}
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 61%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
